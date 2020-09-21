@@ -1,0 +1,10 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import './variables';
+@import './globals';
+
+// Pages
+@import './pages/game-page.styles';
+
+// Components
+@import './components/navbar.styles';

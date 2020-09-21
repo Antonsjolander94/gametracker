@@ -1,0 +1,337 @@
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-word;
+  box-sizing: border-box;
+  text-rendering: optimizelegibility;
+  font-feature-settings: 'kern';
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  max-width: 1210px;
+}
+
+main {
+  margin-top: 8.5rem;
+}
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 400;
+  background: $bg-color;
+  line-height: 1.4rem;
+}
+
+:root {
+  --color-text: #fafbfc;
+  --color-background: #24292e;
+  --color-link: #9ecbff;
+  --color-update-background: #6d3733;
+  --color-update-border: #522926;
+  --color-box-background: hsl(210, 12%, 12%);
+  --color-box-border: hsl(210, 12%, 20%);
+  --color-syntax-k: #9ecbff;
+  --color-syntax-s: #f97583;
+  --color-syntax-m: #ffab70;
+  --color-syntax-c: #6a737d;
+  --color-syntax-nb: #28a745;
+  --color-syntax-o: #959da5;
+  --color-syntax-na: #fafbfc;
+  --fz: 1rem;
+  --lh: 1.77778rem;
+  --type-scale: 1.4;
+}
+
+@media screen and (min-width: 764px) {
+  :root {
+    --fzb: 112.5%;
+    --lh: 1.77778rem;
+  }
+}
+
+::selection {
+  background: var(--color-link);
+  color: #fff;
+  text-shadow: none;
+}
+
+html {
+  font-size: var(--fzb);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #24292e;
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Helvetica, Arial,
+    sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+  font-size: var(--fz);
+  line-height: var(--lh);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+a {
+  background: 0 0;
+  color: var(--color-link);
+  word-wrap: break-word;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: var(--color-text);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: var(--lh);
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: calc(var(--lh) * 1.5);
+  font-weight: 700;
+  text-decoration: none;
+}
+@mixin small-text {
+  font-size: 10.5px;
+  line-height: initial;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@mixin center-content-sm-down {
+  @include media-breakpoint-down(sm) {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+}
+.center-content-sm-down {
+  @include center-content-sm-down();
+}
+.modal-open {
+  overflow-y: auto;
+}
+.preamble {
+  font-size: calc(0.75em * var(--type-scale));
+  font-weight: normal;
+  margin-top: 0;
+  @include center-content-sm-down();
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 1em;
+  }
+}
+.small-text {
+  @include small-text;
+}
+.page-title {
+  max-width: 80%;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0.35em;
+  @include media-breakpoint-up(md) {
+    font-size: 3.25em;
+    line-height: 0.85em;
+  }
+  @include center-content-sm-down();
+}
+
+@mixin btn-app {
+  min-width: 15%;
+  margin-top: 0.6em;
+  border-radius: 0.25em;
+  backdrop-filter: blur(1em);
+  padding: 1em 3em;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  @include small-text;
+}
+.btn-buy {
+  @include btn-app;
+  background-color: rgba($color: #89d12a, $alpha: 0.12);
+  border: 1px solid #89d12a;
+  box-shadow: 0 0.5em 0.5em rgba($color: #89d12a, $alpha: 0);
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color: #89d12a, $alpha: 0.6) !important;
+    border: 1px solid #89d12a !important;
+    box-shadow: 0 0.4em 0.8em rgba($color: #000, $alpha: 0.2) !important;
+  }
+
+  &:active {
+    background-color: rgba($color: #89d12a, $alpha: 0.15) !important;
+    border: 1px solid #89d12a !important;
+    box-shadow: 0 0.4em 0.8em rgba($color: #000, $alpha: 0.2) !important;
+  }
+}
+.btn-regular {
+  @include btn-app;
+  box-shadow: 0 0.5em 0.5em rgba($color: $bg-color-dark, $alpha: 0);
+  background-color: rgba($color: white, $alpha: 0.05);
+  border: 1px solid rgba($color: white, $alpha: 0.25);
+  @include small-text;
+  &:hover,
+  &:focus {
+    background-color: rgba($color: white, $alpha: 0.25) !important;
+    border: 1px solid white !important;
+    box-shadow: 0 0.4em 0.8em rgba($color: #000, $alpha: 0.2) !important;
+  }
+
+  &:active {
+    background-color: rgba($color: $bg-color-dark, $alpha: 0.15) !important;
+    border: 1px solid $bg-color-dark !important;
+    box-shadow: 0 0.4em 0.8em rgba($color: #000, $alpha: 0.2) !important;
+  }
+}
+
+h1 {
+  font-size: calc(
+    var(--fz) * var(--type-scale) * var(--type-scale) * var(--type-scale)
+  );
+  line-height: calc(var(--lh) * 1.5);
+}
+
+h2 {
+  font-size: calc(var(--fz) * var(--type-scale) * var(--type-scale));
+}
+
+h3 {
+  font-size: calc(var(--fz) * var(--type-scale));
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: calc(var(--fz) / var(--type-scale));
+}
+
+h6 {
+  font-size: calc(var(--fz) / var(--type-scale) / var(--type-scale));
+}
+p {
+  font-size: calc(0.75em * var(--type-scale));
+  opacity: 0.65;
+}
+ul,
+ol {
+  margin: 0 0 var(--lh) var(--lh);
+}
+
+li ul,
+li ol {
+  margin: 0 0 0 var(--lh);
+}
+
+hr {
+  display: block;
+  height: var(--lh);
+  border: 0;
+  box-shadow: 0 1px 0 #eee;
+}
+
+blockquote {
+  margin-bottom: var(--lh);
+  padding: var(--lh);
+  background: var(--color-box-background);
+  box-shadow: inset 0 0 0 1px var(--color-box-border);
+}
+
+blockquote p {
+  margin: 0;
+  font-style: italic;
+}
+
+figure {
+  margin-bottom: var(--lh);
+}
+
+figcaption {
+  font-size: var(--fz) / var(--type-scale) / var(--type-scale);
+}
+
+/*
+A simple little SCSS mixin for creating scrim gradients
+Inspired by Andreas Larson - https://github.com/larsenwork
+https://css-tricks.com/easing-linear-gradients/
+*/
+
+@mixin scrimGradient($startColor: $bg-color, $direction: 'to top') {
+  $scrimCoordinates: (
+    0: 1,
+    19: 0.738,
+    34: 0.541,
+    47: 0.382,
+    56.5: 0.278,
+    65: 0.194,
+    73: 0.126,
+    80.2: 0.075,
+    86.1: 0.042,
+    91: 0.021,
+    95.2: 0.008,
+    98.2: 0.002,
+    100: 0,
+  );
+
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue)
+      percentage($colorStop/100);
+    $stops: append($stops, $stop, comma);
+  }
+
+  background: linear-gradient(unquote($direction), $stops);
+}
