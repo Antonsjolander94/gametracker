@@ -7,7 +7,7 @@ import Divider from '../components/divider/divider.component'
 import BackgroundImage from 'gatsby-background-image'
 import GameCardCover from '../components/game-card-cover/game-card-cover.component'
 import PlatformCardGroup from '../components/platform-card-group/platform-card-group.component'
-
+import RecentGames from '../components/recent-games/recent-games.component'
 const GamePostTemplate = ({ data }) => {
   const post = data.data
   console.log(post)
@@ -33,12 +33,22 @@ const GamePostTemplate = ({ data }) => {
             </Col>
           </Row>
           <Row className="mt-5 mb-3">
-            <Col>
-              <Button className="btn-buy mr-3">Buy game</Button>
-              <Button className="btn-regular">Watch trailer</Button>
+            <Col xs={12} md={'auto'}>
+              <Button block className="btn-buy ">
+                Buy game
+              </Button>
+            </Col>
+            <Col xs={12} md={'auto'}>
+              <Button block className="btn-regular ">
+                Watch Trailer
+              </Button>
             </Col>
           </Row>
-          <Divider></Divider>
+          <Row>
+            <Col>
+              <Divider />
+            </Col>
+          </Row>
           <Row>
             <Col>
               <h3>Description</h3>
@@ -49,6 +59,12 @@ const GamePostTemplate = ({ data }) => {
               />
             </Col>
           </Row>
+          <Row>
+            <Col>
+              <Divider />
+            </Col>
+          </Row>
+          <RecentGames />
         </Container>
         {post.coverImage && (
           <>

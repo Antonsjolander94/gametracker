@@ -1,12 +1,12 @@
 .platform-card {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.01);
   border: 1px solid rgba($color: white, $alpha: 0.15);
   backdrop-filter: blur(1em);
-
-  margin: 0.25em;
+  overflow: hidden;
+  margin: 0.3em;
   border-radius: 0.25em;
   margin-left: 0;
-  margin-right: 0.5em;
+  margin-right: 0.6em;
   display: flex;
   justify-content: center;
   mix-blend-mode: lighten;

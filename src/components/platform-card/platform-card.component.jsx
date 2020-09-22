@@ -31,7 +31,7 @@ const PlatformCard = ({ platform }) => {
       </div>
       <div className="platform-card-divider"></div>
       <div className="platform-card-text">
-        <p className="small-text">
+        <div className="small-text">
           {
             {
               PC: <p>PC</p>,
@@ -46,7 +46,7 @@ const PlatformCard = ({ platform }) => {
               'Project Scarlett': <p>Project Scarlett</p>,
             }[platform]
           }
-        </p>
+        </div>
       </div>
     </li>
   )

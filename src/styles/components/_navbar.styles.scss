@@ -7,4 +7,10 @@
   position: fixed;
   top: 0;
   padding: 0.25rem 1rem;
+
+  .nav-link {
+    &[aria-current='page'] {
+      color: white !important;
+    }
+  }
 }
