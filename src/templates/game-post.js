@@ -32,7 +32,7 @@ const GamePostTemplate = ({ data }) => {
               </div>
             </Col>
           </Row>
-          <Row className="mt-5 mb-3">
+          <Row className="mt-5">
             <Col xs={12} md={'auto'}>
               <Button block className="btn-buy ">
                 Buy game

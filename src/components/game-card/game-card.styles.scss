@@ -1,7 +1,6 @@
 .game-card {
   position: relative;
-  display: block;
-  width: 100%;
+  flex: 0 1 calc(20% - 8px);
   .game-card-masthead {
     width: 100%;
     height: 225px;

@@ -7,14 +7,14 @@ import './game-card.styles.scss'
 const GameCard = ({ game }) => {
   console.log(game)
   return (
-    <Link to={`/game/${game.slug}`} className="game-card">
-      {/* <Img alt="" fluid={game.coverImage.fluid} /> */}
-      <BackgroundImage
-        className="game-card-masthead"
-        fluid={game.coverImage.fluid}
-      />
-      {game.title}
-    </Link>
+    <li className="game-card">
+      <Link to={`/game/${game.slug}`} title={game.title}>
+        <BackgroundImage
+          className="game-card-masthead"
+          fluid={game.coverImage.fluid}
+        />
+      </Link>
+    </li>
   )
 }
 export default GameCard

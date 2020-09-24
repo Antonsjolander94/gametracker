@@ -29,6 +29,12 @@ module.exports = {
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-background-image`,
     'gatsby-transformer-remark',

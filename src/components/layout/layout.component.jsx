@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Navigation from '../navigation/navigation.component'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 class Template extends React.Component {
   render() {
@@ -13,10 +14,10 @@ class Template extends React.Component {
     }
 
     return (
-      <>
+      <PageTransition>
         <Navigation />
         <main id="main">{children}</main>
-      </>
+      </PageTransition>
     )
   }
 }

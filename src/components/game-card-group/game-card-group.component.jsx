@@ -7,13 +7,9 @@ const GameCardGroup = ({ games, title }) => {
   return (
     <section className="game-card-group">
       <h3>{title}</h3>
-      <ul className="row">
+      <ul>
         {games.edges.map(({ node }) => {
-          return (
-            <li className="col-6 col-md-4" key={node.slug}>
-              <GameCard game={node} />
-            </li>
-          )
+          return <GameCard game={node} key={node.slug} />
         })}
       </ul>
     </section>
